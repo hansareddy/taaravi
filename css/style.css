@@ -407,50 +407,7 @@ p { color: var(--text-secondary); }
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-md);
-  margin-bottom: var(--space-3xl);
-}
-
-/* Scrolling Marquee Trust Bar */
-.hero-marquee-wrap {
-  width: 100%;
-  overflow: hidden;
-  padding: var(--space-lg) 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-card);
-  margin: 0 calc(-50vw + 50%);
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-.hero-marquee {
-  display: flex;
-  gap: var(--space-xl);
-  white-space: nowrap;
-  animation: marquee-scroll 30s linear infinite;
-  width: max-content;
-}
-
-.hero-marquee span {
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.marquee-dot {
-  color: var(--sathyu-amber);
-  font-size: 0.5rem;
-}
-
-@keyframes marquee-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  margin-bottom: 0;
 }
 
 /* ---------- Brand Story ---------- */
@@ -1509,7 +1466,7 @@ p { color: var(--text-secondary); }
 
   .hero-title { font-size: clamp(2rem, 6vw, 2.8rem); }
 
-  .hero-marquee-wrap { margin-top: var(--space-xl); }
+
 
   .steps-grid {
     grid-template-columns: 1fr;
