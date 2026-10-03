@@ -357,11 +357,27 @@ p { color: var(--text-secondary); }
   background: var(--bg-primary);
   text-align: center;
   overflow: hidden;
+  position: relative;
+}
+
+.hero-bg-motif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(700px, 90vw);
+  height: min(700px, 90vw);
+  opacity: 0.18;
+  color: var(--sathyu-amber);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner {
   max-width: 720px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-badge {
@@ -410,50 +426,193 @@ p { color: var(--text-secondary); }
   margin-bottom: 0;
 }
 
-/* ---------- Brand Story ---------- */
+/* ---------- Brand Story & Illustration ---------- */
 .brand-story {
-  padding: var(--space-4xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
 }
 
-.brand-story-inner {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
+.brand-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
 }
 
-.story-eyebrow {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--accent-warm);
-  margin-bottom: var(--space-sm);
+.story-illustration-card {
+  position: relative;
 }
 
-.brand-story-inner h2 {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+.story-img-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(44, 30, 22, 0.09);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.story-illustration-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.story-img-frame:hover .story-illustration-img {
+  transform: scale(1.03);
+}
+
+.story-illustration-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(31, 26, 23, 0.88);
+  backdrop-filter: blur(8px);
+  color: #FAF6F0;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.76rem;
   font-weight: 500;
-  margin-bottom: var(--space-md);
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-sm);
 }
 
-.story-divider {
+.story-content {
+  text-align: left;
+}
+
+.story-divider-left {
   width: 48px;
   height: 2px;
   background: var(--sathyu-amber);
-  margin: 0 auto var(--space-xl);
+  margin: 0 0 var(--space-xl);
   border-radius: 2px;
 }
 
-.brand-story-inner p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--text-secondary);
+.story-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  font-weight: 450;
   margin-bottom: var(--space-md);
 }
 
-.brand-story-inner p:last-child { margin-bottom: 0; }
+.story-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+.story-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.story-item-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.story-item h4 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.story-item p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- Craft Traditions Showcase ---------- */
+.craft-traditions {
+  padding: var(--space-5xl) 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.crafts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.craft-card {
+  background: var(--bg-card);
+  padding: var(--space-2xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s var(--ease-out);
+}
+
+.craft-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(44, 30, 22, 0.08);
+  border-color: var(--sathyu-amber);
+}
+
+.craft-icon-wrap {
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-lg);
+  color: var(--sathyu-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.craft-icon-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.craft-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.craft-card p {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.craft-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-warm);
+  background: rgba(201, 148, 54, 0.08);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-top: auto;
+  border: 1px solid rgba(201, 148, 54, 0.2);
+}
 
 /* ---------- Catalog ---------- */
 .catalog {
@@ -852,24 +1011,50 @@ p { color: var(--text-secondary); }
 }
 
 .bespoke-banner {
-  max-width: 800px;
-  margin: 0 auto var(--space-3xl);
+  max-width: 960px;
+  margin: 0 auto var(--space-4xl);
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-2xl) var(--space-xl);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(44, 30, 22, 0.06);
   transition: all 0.35s var(--ease-out);
 }
 
 .bespoke-banner:hover {
-  box-shadow: var(--shadow);
+  box-shadow: 0 16px 44px rgba(44, 30, 22, 0.1);
+  border-color: rgba(201,148,54,0.3);
 }
 
-.bespoke-inner {
-  text-align: center;
-  max-width: 580px;
-  margin: 0 auto;
+.bespoke-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+}
+
+.bespoke-illustration-wrap {
+  height: 100%;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.bespoke-illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.bespoke-banner:hover .bespoke-illustration-img {
+  transform: scale(1.04);
+}
+
+.bespoke-text {
+  padding: var(--space-3xl) var(--space-2xl);
+  text-align: left;
 }
 
 .bespoke-tag {
@@ -882,23 +1067,24 @@ p { color: var(--text-secondary); }
   margin-bottom: var(--space-md);
 }
 
-.bespoke-inner h3 {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+.bespoke-text h3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
   font-weight: 500;
   margin-bottom: var(--space-sm);
+  color: var(--text-primary);
 }
 
-.bespoke-inner p {
+.bespoke-text p {
   font-size: 0.92rem;
   margin-bottom: var(--space-lg);
   line-height: 1.7;
+  color: var(--text-secondary);
 }
 
 .bespoke-features {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-xs) var(--space-md);
+  gap: var(--space-xs) var(--space-sm);
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--accent-warm);
@@ -906,10 +1092,14 @@ p { color: var(--text-secondary); }
 }
 
 .bespoke-features span {
-  padding: 4px 12px;
+  padding: 5px 14px;
   border: 1px solid rgba(194,99,67,0.2);
   border-radius: var(--radius-pill);
   background: rgba(194,99,67,0.05);
+}
+
+.bespoke-btn {
+  display: inline-flex;
 }
 
 /* Reels Carousel */
@@ -1500,6 +1690,107 @@ p { color: var(--text-secondary); }
 
   .carousel-arrow { width: 34px; height: 34px; }
   .carousel-arrow svg { width: 16px; height: 16px; }
+
+/* ---------- Craft Heritage Banner ---------- */
+.craft-heritage-section {
+  padding: var(--space-4xl) 0;
+  background: var(--bg-primary);
+}
+
+.craft-banner-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 16px 44px rgba(44, 30, 22, 0.1);
+  max-height: 380px;
+}
+
+.craft-banner-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.craft-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(31,26,23,0.88) 0%, rgba(31,26,23,0.5) 60%, rgba(31,26,23,0.15) 100%);
+  display: flex;
+  align-items: center;
+  padding: var(--space-3xl);
+}
+
+.craft-banner-caption {
+  max-width: 520px;
+  color: #FAF6F0;
+}
+
+.craft-banner-caption .caption-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sathyu-amber);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.craft-banner-caption h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 500;
+  color: #FAF6F0;
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.craft-banner-caption p {
+  font-size: 0.95rem;
+  color: rgba(250, 246, 240, 0.85);
+  line-height: 1.6;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .brand-story-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  
+  .crafts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .bespoke-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bespoke-illustration-wrap {
+    min-height: 240px;
+    max-height: 280px;
+  }
+
+  .craft-banner-overlay {
+    background: linear-gradient(0deg, rgba(31,26,23,0.92) 0%, rgba(31,26,23,0.4) 100%);
+    padding: var(--space-xl);
+  }
+}
+
+@media (max-width: 600px) {
+  .crafts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .bespoke-text {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
 
   .footer-grid {
     grid-template-columns: 1fr;

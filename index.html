@@ -66,6 +66,12 @@
 
   <!-- ========== HERO ========== -->
   <section class="hero" id="hero">
+    <div class="hero-bg-motif" aria-hidden="true">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.3" stroke-dasharray="1 3"/>
+        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.25"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="hero-inner fade-in">
         <span class="hero-badge">🪷 Handloom Boutique · Hanamkonda</span>
@@ -90,29 +96,122 @@
             Chat on WhatsApp
           </a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ========== BRAND STORY ========== -->
+  <!-- ========== BRAND STORY & ARTISAN ILLUSTRATION ========== -->
   <section class="brand-story" id="about">
     <div class="container">
-      <div class="brand-story-inner fade-in">
-        <span class="story-eyebrow">Our Story</span>
-        <h2>The Taaravi Story</h2>
-        <div class="story-divider"></div>
-        <p>
-          From the heart of Hanamakonda, Taaravi curates handloom sarees that honour India's
-          finest weaving traditions. Each piece is handpicked for its artistry, authenticity,
-          and the story woven into every thread.
-        </p>
-        <p>
-          We believe that a saree is more than fabric — it's heritage, elegance, and confidence
-          wrapped into six yards of grace.
-        </p>
+      <div class="brand-story-grid fade-in">
+        <div class="story-illustration-card">
+          <div class="story-img-frame">
+            <img src="assets/images/brand-weaving.png" alt="Handloom Artisan Crafting Saree" class="story-illustration-img">
+            <div class="story-illustration-badge">
+              <span class="badge-icon">✨</span>
+              <span>100% Authentic Handloom</span>
+            </div>
+          </div>
+        </div>
+        <div class="story-content">
+          <span class="story-eyebrow">Our Heritage & Craft</span>
+          <h2>The Taaravi Story</h2>
+          <div class="story-divider-left"></div>
+          <p class="story-lead">
+            From the heart of Hanamakonda, Taaravi curates handloom sarees that honour India's
+            finest weaving traditions. Each piece is handpicked directly for its artistry, authenticity,
+            and the heritage story woven into every thread.
+          </p>
+          <p>
+            We believe that a saree is far more than six yards of fabric — it is heritage, grace, and timeless confidence.
+          </p>
+          <div class="story-highlights">
+            <div class="story-item">
+              <span class="story-item-icon">🪷</span>
+              <div>
+                <h4>Direct Weaver Sourcing</h4>
+                <p>Supporting master artisan handloom clusters with fair craft practices.</p>
+              </div>
+            </div>
+            <div class="story-item">
+              <span class="story-item-icon">👑</span>
+              <div>
+                <h4>Handpicked Quality</h4>
+                <p>Every weave is personally inspected for pure silk, zari & cotton authenticity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- ========== CRAFT TRADITIONS SHOWCASE ========== -->
+  <section class="craft-traditions" id="crafts">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-eyebrow">Weaving Clusters</span>
+        <h2>India's Finest Weaves</h2>
+        <p>Explore the timeless techniques and regional artistry behind our curated sarees.</p>
+      </div>
+
+      <div class="crafts-grid fade-in">
+        <div class="craft-card">
+          <div class="craft-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M32 8 C20 18 12 30 32 56 C52 30 44 18 32 8 Z" fill="rgba(201,148,54,0.08)" stroke="var(--sathyu-amber)"/>
+              <path d="M32 20 C24 26 20 34 32 46 C44 34 40 26 32 20 Z" stroke="var(--sathyu-amber)" stroke-dasharray="2 2"/>
+              <circle cx="32" cy="32" r="3" fill="var(--sathyu-amber)"/>
+            </svg>
+          </div>
+          <h3>Jamdani Weave</h3>
+          <p>Discontinuous supplementary weft technique creating weightless, floating floral motifs on fine muslin & jute silk.</p>
+          <span class="craft-tag">Bengal Heritage</span>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="12" y="12" width="40" height="40" rx="4" fill="rgba(142,36,44,0.08)" stroke="var(--accent-warm)"/>
+              <path d="M12 24 H52 M12 40 H52 M24 12 V52 M40 12 V52" stroke="var(--accent-warm)" stroke-opacity="0.4"/>
+              <polygon points="32,16 40,28 24,28" fill="var(--accent-warm)"/>
+            </svg>
+          </div>
+          <h3>Semi-Gadwal</h3>
+          <p>Renowned for rich contrasting Zari borders and intricate Kuttu temple weave joins crafted for celebratory drapes.</p>
+          <span class="craft-tag">Telangana Craft</span>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="32" cy="32" r="22" fill="rgba(201,148,54,0.08)" stroke="var(--sathyu-amber)"/>
+              <polygon points="32,16 44,32 32,48 20,32" stroke="var(--sathyu-amber)" fill="rgba(201,148,54,0.15)"/>
+              <circle cx="32" cy="32" r="4" fill="var(--accent-warm)"/>
+            </svg>
+          </div>
+          <h3>Tie & Dye</h3>
+          <p>Artisanal resist-dyeing method producing vibrant geometric patterns, jungle themes, and classic elephant motif borders.</p>
+          <span class="craft-tag">Resist Dye Art</span>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="14" y="14" width="36" height="36" stroke="var(--sathyu-amber)"/>
+              <line x1="14" y1="14" x2="50" y2="50" stroke="var(--sathyu-amber)" stroke-dasharray="2 3"/>
+              <line x1="50" y1="14" x2="14" y2="50" stroke="var(--sathyu-amber)" stroke-dasharray="2 3"/>
+              <circle cx="32" cy="14" r="2" fill="var(--sathyu-amber)"/>
+              <circle cx="32" cy="50" r="2" fill="var(--sathyu-amber)"/>
+            </svg>
+          </div>
+          <h3>Narayanapet</h3>
+          <p>Distinctive broad Zari borders and fine check body drapes woven with pure cotton-silk yarn strength.</p>
+          <span class="craft-tag">Traditional Classic</span>
+        </div>
+      </div>
+    </div>
+  </section>/div>
   </section>
 
   <!-- ========== SAREE CATALOG ========== -->
@@ -207,7 +306,10 @@
 
       <!-- Bespoke Customization Card -->
       <div class="bespoke-banner fade-in">
-        <div class="bespoke-inner">
+        <div class="bespoke-grid">
+          <div class="bespoke-illustration-wrap">
+            <img src="assets/images/bespoke-design.png" alt="Bespoke Saree Design Illustration" class="bespoke-illustration-img">
+          </div>
           <div class="bespoke-text">
             <span class="bespoke-tag">✦ Bespoke Customization</span>
             <h3>Custom Half Sarees & Handwork</h3>
@@ -221,11 +323,11 @@
               <span>Pure Handloom</span>
               <span>Worldwide Shipping</span>
             </div>
+            <a href="https://wa.me/919347893141?text=Hi%20Taaravi!%20I%20saw%20your%20customization%20services%20and%20would%20like%20to%20inquire%20about%20a%20bespoke%20order."
+              target="_blank" rel="noopener" class="btn btn-primary bespoke-btn">
+              Inquire via WhatsApp
+            </a>
           </div>
-          <a href="https://wa.me/919347893141?text=Hi%20Taaravi!%20I%20saw%20your%20customization%20services%20and%20would%20like%20to%20inquire%20about%20a%20bespoke%20order."
-            target="_blank" rel="noopener" class="btn btn-primary">
-            Inquire via WhatsApp
-          </a>
         </div>
       </div>
 
@@ -299,6 +401,22 @@
         <a href="https://www.instagram.com/taaravi_/" target="_blank" rel="noopener" class="btn btn-outline">
           View All Reels on @taaravi_ →
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CRAFT HERITAGE BANNER ========== -->
+  <section class="craft-heritage-section fade-in">
+    <div class="container">
+      <div class="craft-banner-card">
+        <img src="assets/images/craft-heritage.png" alt="Indian Handloom Heritage Craft Banner" class="craft-banner-img">
+        <div class="craft-banner-overlay">
+          <div class="craft-banner-caption">
+            <span class="caption-eyebrow">✦ Heritage Artistry</span>
+            <h2>Woven with Passion & Pure Grace</h2>
+            <p>Every Taaravi saree carries centuries of Indian loom heritage — handpicked directly for you.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
