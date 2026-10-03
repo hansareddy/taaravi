@@ -360,18 +360,7 @@ p { color: var(--text-secondary); }
   position: relative;
 }
 
-.hero-bg-motif {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(700px, 90vw);
-  height: min(700px, 90vw);
-  opacity: 0.18;
-  color: var(--sathyu-amber);
-  pointer-events: none;
-  z-index: 0;
-}
+
 
 .hero-inner {
   max-width: 720px;
